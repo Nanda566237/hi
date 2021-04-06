@@ -1,0 +1,34 @@
+{% extends 'html/header.html' %}
+{% block title %}User Data{% endblock %}
+{% block content %}
+<div class="container">
+	<div class="row">
+		<div class="col-md-2"></div>
+		<div class="col-md-8 card">
+		<table class="table tabler-striped table-hover">
+			<tr class="bg-dark text-white">
+				<th>S.no</th>
+				<th>Username</th>
+				<th>Email</th>
+				<th>Age</th>
+			</tr>
+			{% for i in info %}
+			<tr>
+				<td>
+					{{forloop.counter}}
+				</td>
+		        	<td>{{i.username}}
+		        	</td>
+		        	<td>{{i.email}}
+		        	</td>
+		        	<td>{{i.age}}
+		        	</td>
+		        	<td><a href="{% url 'ue' i.id %}" class="btn btn-info">Edit</a><a href="{% url 'infodelete' i.id %}" class="btn btn-danger">Delete</a></td>
+		        </tr>
+		        	{% endfor %}
+        </table>
+        </div>
+     </div>        	
+</div>
+{% endblock %}
+		        	

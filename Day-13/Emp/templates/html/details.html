@@ -1,0 +1,26 @@
+
+{% extends 'html/header.html' %}
+{% block title %}Details{% endblock %}
+{% block content %}
+<div class="container">
+	<div class="row">
+		<div class="card col-md-4">
+			<h4 class="text-danger">profile Image</h4>
+			<div class="card-body">
+			<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvRNPWNdSBbI2j9dB_zbrGwXt6caCrHBwLtA&usqp=CAU" height="200px"width="200px">
+		</div>
+	</div>
+	 <div class="card col-md-7">
+			<h4>user_details</h4>
+			<div class="">
+				<h2><label class="text-warning">UserName :{{d.us}}</label>
+				<h3><label>email:{{d.em}}</label></h3>
+				<h3><label>age:{{d.ag}}</label></h3>
+				<h3><label>password:{{d.ps}}</label></h3>
+			    </h2>
+			</div>
+		</div>
+	</div>				  
+</div>
+{% endblock %}
+
