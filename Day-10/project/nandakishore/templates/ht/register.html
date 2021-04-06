@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div class="row">
+		<div class="col-sm-4"></div>
+		<div class="col-sm-4">
+			<div class="card">
+				<div class="card-header">Registraction</div>
+				<div class="card-body"></div>
+				<form action=" " method="POST">
+					{% csrf_token %}
+					<div class ="form-group">
+		<label for ="email">email</label>
+		<input type="email" placeholder="enter" name ="a" class="form-control" id="email">
+	</div>
+	<div class="form-group">
+		<label for="pwd">password</label>
+		<input type="password" placeholder="enter"name="b" class="form-control" id="pwd">
+	</div>
+	<div class="form-group">
+		<label for="age">Age</label>
+		<input type="age" placeholder="enter" name="c" class="form-control" id="age">
+		</div>  
+		<input type="submit" value="submit" class="btn btn-primary">
+	</form>
+	<div class="card-footer">
+		copy@rights is main
+	</div>
+</form>
+</body>
+</html>
